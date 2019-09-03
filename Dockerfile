@@ -10,6 +10,7 @@ LABEL "com.github.actions.icon"="code"
 LABEL "com.github.actions.color"="blue"
 
 RUN apk --no-cache add \
+  bash \
   ghostscript \
   imagemagick \
   gnupg \

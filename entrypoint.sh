@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 set -v
@@ -21,6 +21,11 @@ find . -type f -name "$match" -print0 |
     echo "Converting $file to ${file%.*}.png ..."
     convert -verbose -density 500 -resize 800 "${file}" "${file%.*}.png"
   done
+
+for pdfile in $match ; do
+  echo "Converting $file to ${file%.*}.png ..."
+  convert -verbose -density 500 -resize '800' "${pdfile}" "${pdfile%.*}".png
+done
 
 pwd
 ls
