@@ -1,5 +1,5 @@
 # pdf2png-action
-![test status](https://github.com/fiedl/pdf2png-action/workflows/Test%20Github%20Actions/badge.svg)
+[![test status](https://github.com/fiedl/pdf2png-action/workflows/Test%20Github%20Actions/badge.svg)](https://github.com/fiedl/pdf2png-action/actions)
 
 This github action converts pdf files into image files.
 
