@@ -1,4 +1,5 @@
 # pdf2png-action
+![test status](https://github.com/fiedl/pdf2png-action/workflows/Test%20Github%20Actions/badge.svg)
 
 This github action converts pdf files into image files.
 
@@ -20,3 +21,9 @@ jobs:
         ROOT_DIR: .
         MATCH: *.pdf
 ```
+
+## Author and License
+
+2019, Sebastian Fiedlschuster
+
+License: MIT
