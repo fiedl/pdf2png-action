@@ -19,7 +19,7 @@ RUN apk --no-cache add \
   wget \
   xz
 
-RUN replace '<policy domain="coder" rights="none" pattern="PDF" />' '<policy domain="coder" rights="read|write" pattern="PDF" />' -- /etc/ImageMagick-6/policy.xml
+RUN sed -i "s|<policy domain=\"coder\" rights=\"none\" pattern=\"PDF\" />|<policy domain=\"coder\" rights=\"read\|write\" pattern=\"PDF\" />|g" /etc/ImageMagick-6/policy.xml
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
