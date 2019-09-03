@@ -1,0 +1,19 @@
+name: Convert PDFs to PNGs
+description: Convert PDF files to PNG files with ghostscript convert.
+author: Sebastian Fiedlschuster
+inputs:
+  root_dir:
+    description: The root directory to search for PDF documents.
+    default: .
+  match:
+    description: The match string to filter for certain PDF documents.
+    default: "*.pdf"
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.root_dir }}
+    - ${{ inputs.match }}
+branding:
+  icon: code
+  color: blue
