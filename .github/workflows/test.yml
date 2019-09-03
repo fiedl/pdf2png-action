@@ -17,4 +17,6 @@ jobs:
       - name: Check output files
         run: |
           set -e
+          pwd
+          ls sample
           file sample/test.png |grep -q ' PNG '
